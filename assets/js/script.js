@@ -5,7 +5,8 @@ $(document).ready(function() {
    // Display the current day in the #currentDay element
    $("#currentDay").text("Today is " + currentDay);
 
-  });
+
+ 
   
   // Generate time blocks
   for (var hour = 9; hour <= 17; hour++) {
@@ -23,3 +24,17 @@ $(document).ready(function() {
     // Color-code time blocks
     updateBlockStyle(timeBlock);
   }
+
+  
+   // Add click event listener for save buttons
+   $(".saveBtn").on("click", function() {
+    var timeBlock = $(this).closest(".time-block");
+    var hour = timeBlock.attr("data-hour");
+    var description = timeBlock.find(".description").val();
+
+    // Save to local storage
+    localStorage.setItem("event_" + hour, description);
+  });
+
+//Closing 
+});
