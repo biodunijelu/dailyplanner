@@ -25,7 +25,7 @@ $(document).ready(function() {
     updateBlockStyle(timeBlock);
   }
 
-  
+
    // Add click event listener for save buttons
    $(".saveBtn").on("click", function() {
     var timeBlock = $(this).closest(".time-block");
@@ -36,5 +36,16 @@ $(document).ready(function() {
     localStorage.setItem("event_" + hour, description);
   });
 
+  // Load events from local storage and update time block styles
+  for (var hour = 9; hour <= 17; hour++) {
+    var storedEvent = localStorage.getItem("event_" + hour);
+    var timeBlock = $(".time-block[data-hour='" + hour + "']");
+    
+    if (storedEvent) {
+      timeBlock.find(".description").val(storedEvent);
+    }
+
+    updateBlockStyle(timeBlock);
+  }
 //Closing 
 });
