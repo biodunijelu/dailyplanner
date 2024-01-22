@@ -47,5 +47,15 @@ $(document).ready(function() {
 
     updateBlockStyle(timeBlock);
   }
+  // Function to format hour in 12-hour format
+  function formatHour(hour) {
+    if (hour === 12) {
+      return "12 PM";
+    } else if (hour > 12) {
+      return (hour - 12) + " PM";
+    } else {
+      return hour + " AM";
+    }
+  }
 //Closing 
 });
