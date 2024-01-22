@@ -20,7 +20,7 @@
       href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Work Day Scheduler</title>
   </head>
 
@@ -31,10 +31,20 @@
       <p id="currentDay" class="lead"></p>
     </header>
     <div class="container">
-      <!-- Timeblocks go here -->
+      <!-- Loop to generate time blocks -->
+      <div class="row time-block">
+        <div class="col-2 hour">9 AM</div>
+        <input type="text" class="col-8 description">
+        <button class="col-2 saveBtn">Save</button>
+      </div>
+    
+      <!-- Repeat the above block for each hour -->
     </div>
+    
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
   </body>
 </html>
+
+
