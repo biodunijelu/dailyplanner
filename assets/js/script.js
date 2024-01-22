@@ -1,8 +1,6 @@
 $(document).ready(function() {
-  // Get the current day using Day.js
-  var currentDay = dayjs().format("dddd, MMMM D");
-
-   // Display the current day in the #currentDay element
+   // Display current day at the top of the calendar
+   var currentDay = dayjs().format("dddd, MMMM D");
    $("#currentDay").text("Today is " + currentDay);
 
 
