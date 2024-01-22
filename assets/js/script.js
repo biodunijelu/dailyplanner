@@ -3,8 +3,10 @@ $(document).ready(function() {
    var currentDay = dayjs().format("dddd, MMMM D");
    $("#currentDay").text("Today is " + currentDay);
 
-  
- // Generate time blocks
+  // Get the container where time blocks will be added
+  var timeblocksContainer = $("#timeblocks-container");
+
+ // Generate time blocks for standard business hours (9 AM to 5 PM)
  for (var hour = 9; hour <= 17; hour++) {
     var timeBlock = $("<div>").addClass("row time-block");
     var hourDiv = $("<div>").addClass("col-2 hour").text(formatHour(hour));
@@ -16,6 +18,9 @@ $(document).ready(function() {
 
     timeBlock.append(hourDiv, descriptionInput, saveBtn);
     $(".container").append(timeBlock);
+
+    //timeblocks
+    timeblocksContainer.append(timeBlock);
 
     // Color-code time blocks
     updateBlockStyle(timeBlock);
@@ -42,8 +47,8 @@ $(document).ready(function() {
 
     updateBlockStyle(timeBlock);
   }
-  // Function to format hour in 12-hour format
-  function formatHour(hour) {
+ // Function to format hour in 12-hour format
+ function formatHour(hour) {
     if (hour === 12) {
       return "12 PM";
     } else if (hour > 12) {
@@ -53,13 +58,13 @@ $(document).ready(function() {
     }
   }
 
-  // Function to update time block styles based on current time
-  function updateBlockStyle(timeBlock) {
+ // Function to update time block styles based on current time
+ function updateBlockStyle(timeBlock) {
     var currentHour = dayjs().hour();
     var blockHour = parseInt(timeBlock.attr("data-hour"));
 
     timeBlock.removeClass("past present future");
-    
+
     if (blockHour < currentHour) {
       timeBlock.addClass("past");
     } else if (blockHour === currentHour) {
