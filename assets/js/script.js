@@ -57,5 +57,21 @@ $(document).ready(function() {
       return hour + " AM";
     }
   }
+
+  // Function to update time block styles based on current time
+  function updateBlockStyle(timeBlock) {
+    var currentHour = dayjs().hour();
+    var blockHour = parseInt(timeBlock.attr("data-hour"));
+
+    timeBlock.removeClass("past present future");
+    
+    if (blockHour < currentHour) {
+      timeBlock.addClass("past");
+    } else if (blockHour === currentHour) {
+      timeBlock.addClass("present");
+    } else {
+      timeBlock.addClass("future");
+    }
+  }
 //Closing 
 });
