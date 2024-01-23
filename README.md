@@ -64,3 +64,9 @@ cd dailyplanner
 
 4. Click the "Save" button to save events. Events will persist between page refreshes.
 
+## Screenshots
+
+
+(https://github.com/biodunijelu/dailyplanner/blob/main/assets/images/mockup_design.png)
+
+
