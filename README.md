@@ -66,7 +66,11 @@ cd dailyplanner
 
 ## Screenshots
 
-
+```md
 (https://github.com/biodunijelu/dailyplanner/blob/main/assets/images/mockup_design.png)
+
+```
+
+## Contributing
 
 
