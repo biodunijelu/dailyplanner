@@ -53,3 +53,14 @@ cd dailyplanner
 ```
 
 3. Open index.html in your preferred web browser.
+
+## Usage
+
+1. Visit the deployed application or open the project locally.
+
+2. Observe the current day at the top of the calendar.
+
+3. Scroll down to view and enter events in the time blocks for each hour.
+
+4. Click the "Save" button to save events. Events will persist between page refreshes.
+
