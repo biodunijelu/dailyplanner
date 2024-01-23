@@ -73,4 +73,7 @@ cd dailyplanner
 
 ## Contributing
 
+Contributions are welcome! If you have any enhancements or bug fixes, feel free to submit a pull request.
+
+
 
