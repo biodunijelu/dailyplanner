@@ -24,3 +24,15 @@ A simple calendar application that allows users to schedule events for each hour
 * **Save Events:** Users can save events by clicking the "Save" button in the time block. The events are stored in local storage.
 
 * **Persist Events:** Events persist between refreshes of the page.
+
+## Technologies
+
+* HTML
+
+* CSS
+
+* JavaScript
+
+* jQuery
+
+* Day.js
