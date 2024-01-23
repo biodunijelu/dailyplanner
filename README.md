@@ -79,6 +79,8 @@ Contributions are welcome! If you have any enhancements or bug fixes, feel free 
 
 Deployment: `Deploy url [https://biodunijelu.github.io/dailyplanner/]`
 
+## License
 
+This project is licensed under the [bootcampspot]. 
 
 
