@@ -36,3 +36,20 @@ A simple calendar application that allows users to schedule events for each hour
 * jQuery
 
 * Day.js
+
+## Installation
+
+1. Clone the repository:
+
+```md
+git clone https://github.com/biodunijelu/dailyplanner
+
+```
+
+2. Open the project folder:
+
+```md
+cd dailyplanner
+```
+
+3. Open index.html in your preferred web browser.
